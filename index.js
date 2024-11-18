@@ -62,7 +62,7 @@ client.on('messageCreate', async (message) => {
       components: [row1]
     });
 
-    setTimeout(() => botMessage.delete(), 5000);
+    setTimeout(() => botMessage.delete(), 15000);
   }
 });
 
@@ -139,7 +139,6 @@ client.on('interactionCreate', async (interaction) => {
 
                   // Enviar o embed para o canal escolhido
                   await channel.send({
-                    content: `Produto **${title}** adicionado com sucesso!`,
                     embeds: [generateProductEmbed(produtos[title])],
                     components: [row]
                   });
